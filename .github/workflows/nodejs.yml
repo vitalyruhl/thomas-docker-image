@@ -23,8 +23,8 @@ jobs:
       - uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{ secrets.GH_U }}
-          password: ${{ secrets.GH_P }}
+          username: ${{ github.reposirory_owner }}
+          password: ${{ secrets.DOCKER_PWD }}
 
       - uses: docker/build-push-action@v2
         with:
@@ -34,4 +34,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.reposirory_owner }}/pterodactyl:nodejs_${{ matrix.tag }}
-            
+
