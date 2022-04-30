@@ -1,12 +1,7 @@
 name: build nodejs docker image for Pterodactyl
 on:
-  #workflow_dispatch:
-  #schedule:
-    #- cron: "0 0 * * 1"
   push:
     branches:[master]
-    #paths:
-     # - nodejs/*
 jobs:
   push:
     name: "thomas-docker-image:nodejs_${{ matrix.tag }}"
