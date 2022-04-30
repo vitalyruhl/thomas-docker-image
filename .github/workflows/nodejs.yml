@@ -1,7 +1,7 @@
 name: build nodejs docker image for Pterodactyl
 on:
   push:
-    branches:[master]
+    branches: [ master ]
 jobs:
   push:
     name: "thomas-docker-image:nodejs_${{ matrix.tag }}"
